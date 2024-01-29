@@ -2,15 +2,19 @@
 
 # Neural Machine Translation (NMT) - English to German
 
-This project trains a sequence-to-sequence neural machine translation model to translate English text to German.
+This project trains a sequence-to-sequence neural machine translation model to translate English text to German. 
+The notebook `NMT-English_ to _German_200epochs.ipynb` demonstrates the 
 
 ## Model Architecture
-The model consists of:
-- An LSTM encoder that encodes the input English text into a latent vector representation  
-- An LSTM decoder that decodes the latent vector representation into German text
+The model consists of an encoder LSTM layer and a decoder LSTM layer with 256 hidden units each. Dropout of 0.3 is used in both LSTM layers to prevent overfitting.
+The encoder LSTM encodes the German input text into a 256-dimensional vector representation, and the decoder LSTM is initialized with this vector to generate the English translation word by word.
 
 ## Training Data 
-The model is trained on the deu-eng parallel corpus containing 25,000 English-German sentence pairs.
+
+The model is trained on the first 25,000 sentence pairs from the deu-eng dataset containing German to English translations. 
+The texts are preprocessed and converted to integer sequences using vocabulary dictionaries of the unique input and output tokens.
+The model is trained for 200 epochs with a batch size of 64. RMSprop optimizer and categorical cross entropy loss are used. 
+Validation split of 20% is used as well as TensorBoard logs for tracking training progress.
 
 ## Preprocessing
 The texts are preprocessed by:
@@ -23,7 +27,7 @@ The model is trained for 200 epochs with a batch size of 64. RMSprop optimizer a
 
 After 200 epochs:
 - Training Accuracy: 82%
-- Validation Loss: 28%
+- Validation Loss: 29%
 
 ## Evaluation
 - A validation split of 20% is used during training to monitor overfitting
