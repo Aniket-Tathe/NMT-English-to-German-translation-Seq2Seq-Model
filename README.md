@@ -3,7 +3,7 @@
 # Neural Machine Translation (NMT) - English to German
 
 This project trains a sequence-to-sequence neural machine translation model to translate English text to German. 
-The notebook `NMT-English_ to _German_200epochs.ipynb` demonstrates the 
+The notebook `NMT-English_ to _German_200epochs.ipynb` is used to showcase this demonstration
 
 ## Model Architecture
 The model consists of an encoder LSTM layer and a decoder LSTM layer with 256 hidden units each. Dropout of 0.3 is used in both LSTM layers to prevent overfitting.
