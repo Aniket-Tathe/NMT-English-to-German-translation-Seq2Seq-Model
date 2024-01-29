@@ -1,5 +1,3 @@
- Here is an updated README with model accuracy and loss:
-
 # Neural Machine Translation (NMT) - English to German
 
 This project trains a sequence-to-sequence neural machine translation model to translate English text to German. 
