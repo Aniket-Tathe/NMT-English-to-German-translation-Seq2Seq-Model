@@ -5,11 +5,11 @@ The notebook `NMT-English_ to _German_200epochs.ipynb` is used to showcase this 
 
 ## Model Architecture
 The model consists of an encoder LSTM layer and a decoder LSTM layer with 256 hidden units each. Dropout of 0.3 is used in both LSTM layers to prevent overfitting.
-The encoder LSTM encodes the German input text into a 256-dimensional vector representation, and the decoder LSTM is initialized with this vector to generate the English translation word by word.
+The encoder LSTM encodes the English input text into a 256-dimensional vector representation, and the decoder LSTM is initialized with this vector to generate the German translation word by word.
 
 ## Training Data 
 
-The model is trained on the first 25,000 sentence pairs from the deu-eng dataset containing German to English translations. 
+The model is trained on the first 25,000 sentence pairs from the deu-eng dataset containing English to German translations. 
 The texts are preprocessed and converted to integer sequences using vocabulary dictionaries of the unique input and output tokens.
 The model is trained for 200 epochs with a batch size of 64. RMSprop optimizer and categorical cross entropy loss are used. 
 Validation split of 20% is used as well as TensorBoard logs for tracking training progress.
